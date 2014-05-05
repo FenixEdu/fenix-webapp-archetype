@@ -11,6 +11,6 @@ This will prompt you for your database credentials, maven information and the ve
 
 The generated application will not use a Configuration file, instead relying on defaults. To create a configuration file, run `mvn bennu:generate-configuration`.
 
-First, you need to bootstrap the application. Run `mvn clean package -Pinstall` (If this fails with an OutOfMemoryError, tune your MAVEN_OPTS environment variable).
+Start up your application: either deploy the war file in `target/`, or run `mvn tomcat7:run`.
 
-You now have a fully working Fenix installation! Either deploy the war file in `target/`, or run `mvn tomcat7:run` to start your application.
+The first time you open your application, you will be guided through the installation process, which will ask you for all the necessary configuration.

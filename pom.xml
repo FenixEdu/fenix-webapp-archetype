@@ -11,7 +11,7 @@
 
     <artifactId>fenix-webapp-archetype</artifactId>
     <name>Fenix Webapp Archetype</name>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <packaging>maven-archetype</packaging>
 
     <build>

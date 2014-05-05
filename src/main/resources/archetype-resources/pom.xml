@@ -17,7 +17,7 @@
     <name>${artifactId}</name>
 
     <properties>
-        <version.org.fenixedu.bennu>2.0.0</version.org.fenixedu.bennu>
+        <version.org.fenixedu.bennu>3.0.1</version.org.fenixedu.bennu>
     </properties>
 
     <build>
@@ -38,6 +38,14 @@
                     <fork>true</fork>
                     <maxmem>2048</maxmem>
                     <meminitial>1024</meminitial>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
             <plugin>
@@ -79,34 +87,14 @@
             <artifactId>default-theme</artifactId>
             <version>${version.org.fenixedu.bennu}</version>
         </dependency>
-    </dependencies>
 
-    <profiles>
-        <profile>
-            <id>install</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <version>1.2.1</version>
-                        <executions>
-                            <execution>
-                                <id>install</id>
-                                <phase>prepare-package</phase>
-                                <goals>
-                                    <goal>java</goal>
-                                </goals>
-                                <configuration>
-                                    <mainClass>pt.utl.ist.codeGenerator.database.Installer</mainClass>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+        <!-- We need an implementation of JAX-RS -->
+        <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-servlet</artifactId>
+                <version>2.7</version>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <repository>
