@@ -4,7 +4,7 @@ Use this archetype to create installations of [FenixEdu](http://fenixedu.org).
 
 Run: 
 ```
-mvn archetype:generate -DarchetypeGroupId=org.fenixedu -DarchetypeArtifactId=fenix-webapp-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository
+mvn archetype:generate -DarchetypeGroupId=org.fenixedu -DarchetypeArtifactId=fenix-webapp-archetype -DarchetypeVersion=2.0.0 -DarchetypeRepository=https://repo.fenixedu.org/simple/fenixedu-maven-repository
 ```
 
 This will prompt you for your database credentials, maven information and the version of Fenix you wish to install (Note that due to maven limitations, empty database passwords are not supported).
